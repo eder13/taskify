@@ -1,0 +1,119 @@
+/* Global CSS */
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.loader-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader-wrap .loader {
+  border: 9px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 9px solid rgb(85,85,85);
+  width: 50px;
+  height: 50px;
+  animation: spin 1.3s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+form {
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 40vw;
+}
+
+form > * {
+  display: block;
+  margin: 0.3rem 0;
+}
+
+form > input[type="text"],
+form > input[type="email"] {
+  height: 2rem;
+}
+
+.padding-1y {
+  padding: 1rem 0;
+}
+
+.padding-05y {
+  padding: 0.5rem 0;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="date"],
+textarea {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="date"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border: 1px solid #ff974c;
+  outline: 0;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0;
+}
+
+.edit {
+  background-color: #ffa600;
+  color: white;
+}
+
+.delete {
+  background-color: #721c24;
+  color: white;
+}
+
+.error {
+  padding: .5rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 5px;
+}

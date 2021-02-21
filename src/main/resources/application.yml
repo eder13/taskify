@@ -1,0 +1,47 @@
+#------------------------------------------------------------------------------
+# Server Configurations
+#
+server:
+  port: 8081
+  error:
+    whitelabel:
+      enabled: false
+#------------------------------------------------------------------------------
+# MySQL Database config
+#
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    # TODO: Adjust host, database, port number and username+password
+    url: jdbc:mysql://${MYSQL_HOST:<HOST>}/<DATABASE>?reconnect=true&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: <MySQL-user>
+    password: <MySQL-password>
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    rest:
+      base-path: "/api"
+
+  #------------------------------------------------------------------------------
+  # OAuth2 Authorization Servers
+  #
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: <your-client-id>
+            client-secret: <your-client-secret>
+
+#------------------------------------------------------------------------------
+# MySQL Enable Logging
+#
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: debug
+#        type:
+#          descriptor:
+#            sql: trace

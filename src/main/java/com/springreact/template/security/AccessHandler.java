@@ -45,7 +45,6 @@ public class AccessHandler {
             String email = oauth2user.getAttribute("email");
 
             // check if user_id is still NULL, which means that a user posted it and is now trying to connect it
-            // TODO: maybe write a script that every x hours those entries will be deleted if still NULL?
             Long connectedBy = taskRepository.getAssociatedUserId(id);
 
             if(connectedBy == null){

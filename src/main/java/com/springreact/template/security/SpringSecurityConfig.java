@@ -63,8 +63,23 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                             public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
                                 httpServletResponse.setContentType(MediaType.TEXT_HTML_VALUE);
                                 httpServletResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                                /// TODO: For deployment, replace window.location.href with homepage domain home-url and login endpoint
-                                httpServletResponse.getOutputStream().println("<script>window.location.href = \"http://localhost:8081/login\"</script>");
+                                httpServletResponse.getOutputStream().println("" +
+                                        "<!DOCTYPE html>" +
+                                        "<html lang=\"en\">" +
+                                        "<head>" +
+                                            "<meta name=\"viewport\" content=\"width-device-width, initial-scale=1.0\">" +
+                                            /// TODO: FOR DEPLOYMENT REPLACE DOMAIN URL HERE (1)
+                                            "<meta http-equiv=\"refresh\" content=\"5;url=http://localhost:8081/login\">" +
+                                            "<title>taskify login</title>" +
+                                        "</head>" +
+                                        "<body style=\"padding-left: 0.5rem;\">" +
+                                            "<p>" +
+                                                "You are being redirected to the Login Page.<br>" +
+                                                /// TODO: FOR DEPLOYMENT REPLACE DOMAIN URL HERE (2)
+                                                "If nothing happens <a href=\"http://localhost:8081/login\">click here</a>." +
+                                            "</p>" +
+                                        "</body>" +
+                                        "</html>");
                             }
                         })
                 )

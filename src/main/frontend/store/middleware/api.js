@@ -124,8 +124,6 @@ const api = ({getState, dispatch}) => (next) => async (action) => {
       setTimeout(() => dispatch({type: onDone, payload: {}}), 500);
       break;
 
-    // TODO: case "patch":
-
     case "delete":
       try {
         const req = await axios.delete(url);

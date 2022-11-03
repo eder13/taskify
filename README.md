@@ -18,6 +18,7 @@ Possible Improvements for Learning:
 * Improve Webpack (HMR, webpack dev and webpack prod profiles)
 * Switch to TypeScript
 * Setup Service Worker
-* Testing 
+* Testing (including setting up some cypress tests)
+* Storybook?
 * Implement gzip compression (https://howtodoinjava.com/spring-boot2/rest/response-gzip-compression/)
 * Switch from OAuth2 to password based Login (https://www.baeldung.com/spring-security-registration)

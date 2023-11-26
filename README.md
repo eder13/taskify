@@ -1,7 +1,5 @@
 # Taskify - CRUD App built with Spring Data REST, OAuth2 and React
 
-## [DEMO](https://enigmatic-everglades-34441.herokuapp.com/)
-
 A web app to manage tasks.
 
 ![alt text](./docs/img1.png "index") ![alt text](./docs/img2.png "add tasks")
